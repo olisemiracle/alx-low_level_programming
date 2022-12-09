@@ -18,14 +18,10 @@ int main(void)
 	{
 		for (j = 48; j <= 57; j++)
 		{
-			for (k = 48; k <= 57; k++)
+			for (k = i; k <= 57; k++)
 			{
-				for (l = 48; l <= 57; l++)
+				for (l = j+1; l <= 57; l++)
 				{
-					if (i == k && j == l)
-					{
-						continue;
-					}
 					putchar(i);
 					putchar(j);
 					putchar(' ');
@@ -37,7 +33,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
-				l = '0';
+				l = 48;
 			}
 		}
 	}
