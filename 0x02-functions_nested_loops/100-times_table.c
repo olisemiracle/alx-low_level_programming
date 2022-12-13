@@ -2,12 +2,10 @@
 /**
  * print_times_table - prints n times table
  * @n: limit for times table
- * Return: nothing
  */
 void print_times_table(int n)
 {
-	int mul;
-	int k, l;
+	int mul, k, l;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -20,7 +18,7 @@ void print_times_table(int n)
 				{
 					_putchar('0' + mul);
 				}
-				else 
+				else
 				{
 					_putchar(',');
 					_putchar(' ');
