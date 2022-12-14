@@ -6,18 +6,19 @@
 
 int main(void)
 {
-	int num, old = 1, new = 2, sum = 0;
+	int num;
+	signed long int old = 1, new = 2, sum = 0;
 
-	printf("%d, ", old);
-	printf("%d, ", new);
+	printf("%ld, ", old);
+	printf("%ld, ", new);
 	sum = old + new;
-	for (num = 1; num < 50; num++)
+	for (num = 3; num < 50; num++)
 	{
-		printf("%d, ", sum);
+		printf("%ld, ", sum);
 		old = new;
 		new = sum;
 		sum = old + new;
 	}
-	printf("%d\n", sum);
+	printf("%ld\n", sum);
 		return (0);
 }
