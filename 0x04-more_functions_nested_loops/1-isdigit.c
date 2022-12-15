@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isdigit - checks if an alphabet is lowercase
+ * _isdigit - checks if a character is digit
  * @c: character to be checked
  * Return: 1 if succesful, 0 otherwise
  */
