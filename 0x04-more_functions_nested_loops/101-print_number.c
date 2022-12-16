@@ -9,18 +9,18 @@
  */
 void print_number(int n)
 {
-	int len = ZERO, digit, power, i, j;
+	int len = ZERO, digit, power, i, j, positive = n;
 
-	if (n == ZERO)
+	if (positive == ZERO)
 		_putchar('0');
 	else
 	{
-		if (n < ZERO)
+		if (positive < ZERO)
 		{
 			_putchar('-');
-			n = n * -ONE;
+			positive = positive * -ONE;
 		}
-		for (i = n; i > ZERO; i = i / TEN)
+		for (i = positive; i > ZERO; i = i / TEN)
 			len++;
 		len--;
 		for (i = len; len > ZERO; len--)
@@ -28,11 +28,11 @@ void print_number(int n)
 			power = ONE;
 			for (j = ONE; j <= len; j++)
 				power = power * TEN;
-			digit = n / power;
+			digit = positive / power;
 			_putchar('0' + digit);
-			n = n - (digit * power);
+			positive = positive - (digit * power);
 			if (len == ONE)
-				_putchar('0' + n);
+				_putchar('0' + positive);
 		}
 	}
 }
