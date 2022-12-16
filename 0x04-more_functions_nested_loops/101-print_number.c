@@ -30,7 +30,7 @@ void print_number(int n)
 				power = power * TEN;
 			digit = n / power;
 			_putchar('0' + digit);
-			n = n % power;
+			n = n - (digit * power);
 			if (len == ONE)
 				_putchar('0' + n);
 		}
