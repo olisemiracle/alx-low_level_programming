@@ -1,33 +1,37 @@
 #include "main.h"
+
+#define TEN 10
+#define ZERO 0
+#define ONE 1
 /**
  * print_number - prints integers
  * @n: The integer to be printed.
  */
 void print_number(int n)
 {
-	int len = 0, digit, power, i, j;
+	int len = ZERO, digit, power, i, j;
 
-	if (n == 0)
+	if (n == ZERO)
 		_putchar('0');
 	else
 	{
-		if (n < 0)
+		if (n < ZERO)
 		{
 			_putchar('-');
-			n = n * -1;
+			n = n * -ONE;
 		}
-		for (i = n; i > 0; i = i / 10)
+		for (i = n; i > ZERO; i = i / TEN)
 			len++;
 		len--;
-		for (i = len; len > 0; len--)
+		for (i = len; len > ZERO; len--)
 		{
-			power = 1;
-			for (j = 1; j <= len; j++)
-				power = power * 10;
+			power = ONE;
+			for (j = ONE; j <= len; j++)
+				power = power * TEN;
 			digit = n / power;
 			_putchar('0' + digit);
 			n = n % power;
-			if (len == 1)
+			if (len == ONE)
 				_putchar('0' + n);
 		}
 	}
