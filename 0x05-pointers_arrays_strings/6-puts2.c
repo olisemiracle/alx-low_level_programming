@@ -1,16 +1,20 @@
 #include "main.h"
 /**
- * puts2 - prints string to standard output
+ * puts2 - prints the reverse of a string
  * @str: pointer to string
  * Return: void
  */
 
 void puts2(char *str)
 {
-	while (*str != '\0')
+	int len = 0, i = 0;
+
+	while (str[len])
+		len++;
+	while (i < len)
 	{
-		_putchar(*str);
-		str = str + 2;
+		_putchar(str[i]);
+		i = i + 2;
 	}
 	_putchar('\n');
 }
