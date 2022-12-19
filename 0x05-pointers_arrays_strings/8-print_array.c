@@ -10,15 +10,22 @@ void print_array(int *a, int n)
 {
 	int i = 0;
 
-	while (i < n)
+	if (n > 0)
 	{
-		printf("%d, ", a[i]);
-		i++;
-
-		if (i == n - 1)
+		while (i < n)
 		{
-			printf("%d\n", a[i]);
-			break;
+			printf("%d, ", a[i]);
+			i++;
+
+			if (i == n - 1)
+			{
+				printf("%d\n", a[i]);
+				break;
+			}
 		}
+	}
+	else
+	{
+		printf("Wrong length");
 	}
 }
