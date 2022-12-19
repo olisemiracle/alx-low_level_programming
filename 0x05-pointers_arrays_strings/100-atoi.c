@@ -12,7 +12,7 @@ int _atoi(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == '-')
-			sign = -1;
+			sign = sign * -1;
 		if (s[i] >= '0' && s[i] <= '9')
 			number = (number * 10) + (s[i] - '0');
 	}
