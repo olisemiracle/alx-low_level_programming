@@ -10,22 +10,30 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		switch (str[i])
-		case ' ':
-		case '	':
-		case '\n':
-		case ',':
-		case ';':
-		case '.':
-		case '!':
-		case '?':
-		case '"':
-		case '(':
-		case ')':
-		case '{':
-		case '}':
-			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-				str[i + 1] -= 32;
+		if (i == 0)
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+				str[i] -= 32;
+		}
+		else
+		{
+			switch (str[i])
+			case ' ':
+			case '	':
+			case '\n':
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+					str[i + 1] -= 32;
+		}
 	}
 	return (str);
 }
