@@ -1,15 +1,15 @@
 #include <stdio.h>
 /**
- * _strncat - function to concatenate two strings
+ * _strncpy - function to copy from string to another
  * @dest: Destination string
  * @src: source string
- * @n: number of characters to be appended
- * Return: pointer to appended string
+ * @n: number of characters to be copied
+ * Return: pointer to copied string
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i= 0,len = 0;
-	
+	int i = 0, len = 0;
+
 	while (src[len])
 		len++;
 	if (len < n)
