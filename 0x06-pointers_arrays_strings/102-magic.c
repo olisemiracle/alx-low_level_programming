@@ -1,9 +1,5 @@
 #include <stdio.h>
-/**
- * main - performs magic
- * Description: performs magic
- * Return - void
- */
+
 int main(void)
 {
 	int n;
