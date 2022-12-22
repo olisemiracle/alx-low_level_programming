@@ -9,15 +9,21 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i = 0;
+	int tmp[100000];
+	int i;
 
-	n = n - 1;
-	while (n > i)
+	i = 0;
+	while (i < n)
 	{
-		printf("%d", a[n]);
-		if (n != 1)
-			printf(", ");
-		n--;
+		tmp[i] = a[i];
+		i++;
 	}
-	printf("\n");
+	n--;
+	i = 0;
+	while (n >= 0)
+	{
+		a[n] = tmp[i];
+		n--;
+		i++;
+	}
 }
