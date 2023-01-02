@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * _strchr- search for a character
  * @s: pointer to string
@@ -12,7 +11,7 @@ char *_strchr(char *s, char c)
 	char *p;
 
 	i = 0;
-	while (i != strlen(s))
+	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 		{
@@ -21,5 +20,5 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	return ('\0');
+	return (NULL);
 }
