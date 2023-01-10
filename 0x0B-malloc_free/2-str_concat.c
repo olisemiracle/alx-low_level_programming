@@ -19,8 +19,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	for (i = 0; i < len1; i++)
 		*(ptr + i) = *(s1 + i);
-	*(ptr + i) = ' ';
-	for (i = 0, j = len1 + 1; i <= len2 + 1; i++, j++)
+	for (i = 0, j = len1; i <= len2; i++, j++)
 		*(ptr + j) = *(s2 + i);
 	return (ptr);
 }
