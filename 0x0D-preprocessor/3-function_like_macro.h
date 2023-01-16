@@ -1,7 +1,5 @@
-#ifndef ABS(x)
-#define ABS(x) if (x < 0) \
-			x = x * -1; \
-		else
-			x = x * 1
+#ifndef FUNCTION
+#define FUNCTION
+#define ABS(x) (((x) < 0) ? (x * -1) : (x))
 #endif
 
