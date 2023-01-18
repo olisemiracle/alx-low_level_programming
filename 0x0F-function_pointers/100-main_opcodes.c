@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	ptr = (char *)&main;
-	for (i = 0; i < numbyte; i++)
+	for (i = 0; i < numbyte - 1; i++)
 	{
 		printf("%02hhx ", ptr[i]);
 	}
-	printf("\n");
+	printf("%02hhx\n", ptr[i]);
 	return (0);
 }
